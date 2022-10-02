@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css">
+    <style>@import url('https://fonts.googleapis.com/css2?Muli&display=swap');
+      
+      .container{
+          display:flex;
+          width:90vw;
+      }
+      
+      .panel{
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height:80vh;
+          border-radius: 50px;
+          flex:0.5;
+          position:relative;
+          transition: flex 0.5s ease-in;
+          color:#fff;
+          cursor:pointer;
+          margin:10px;
+      }
+      
+      .panel h3{
+          position:absolute;
+          bottom:20px;
+          left:20px;
+          opacity:0;
+      }
+      
+      .panel.active{
+          flex:5;
+      }
+      
+      .panel.active h3{
+          opacity:1;
+           transition: opacity 0.4s ease-in 0.4s;
+      }
+      
+      @media(max-width:480px){
+          .container{
+              width:100vw;
+          }
+      
+          .panel:nth-of-type(4),.panel:nth-of-type(5){
+              display:none;
+          }
+      }</style>
+    <title>Uday</title>
+  </head>
+  <body>
+    <header class="l-header">
+      <nav class="nav bd-grid">
+        <div>
+          <a href="#" class="nav__logo">Uday Budhija</a>
+        </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">Skills</a>
+            </li>
+            <li class="nav__item">
+              <a href="#portfolio" class="nav__link">Portfolio</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main">
+      <!-- Home -->
+      <section class="home" id="home">
+        <div class="home__container bd-grid">
+          <h1 class="home__title"><span>HE</span><br />LLO.</h1>
+
+          <div class="home__scroll">
+            <a href="#about" class="home__scroll-link"
+              ><i class="bx bx-up-arrow-alt"></i>Scroll Down</a
+            >
+          </div>
+          <img src="" alt="" class="home__img" />
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <h2 class="section-title">About</h2>
+
+        <div class="about__container bd-grid">
+          <div class="about__img">
+            <img src="images/uduu.jpeg" alt="photo" />
+          </div>
+          <h2 class="about__subtitle">I'm Uday Budhija</h2>
+          <span class="about__profession">Full Stack Developer</span>
+          <p class="about__text">
+            I am a aspiring Fullstack Developer,currently i am a frontend developer.
+          </p>
+          <div class="about__social">
+            <a href="https://www.linkedin.com/in/uday-budhija-6242391b1/" class="about__social-icon"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://twitter.com/BudhijaUday" class="about__social-icon"><i class="bx bxl-twitter"></i></a>
+            <a href="https://github.com/BudhijaxUday" class="about__social-icon"><i class="bx bxl-github"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- skills -->
+      <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills__container bd-grid">
+            <div class="skills__box">
+                <h3 class="skills__subtitle">Development</h3>
+                <span class="skills__name">HTML</span>
+                <span class="skills__name">CSS</span>
+                <span class="skills__name">JavaScript</span>
+
+                <h3 class="skills__subtitle">Languages</h3>
+                <span class="skills__name">C++</span>
+                <span class="skills__name">Python</span>
+                <span class="skills__name">Java</span>
+            </div>
+        </div>
+      </section>
+
+      <!-- portfolio -->
+
+      <section class="portfolio section" id="portfolio">
+
+          <h2 class="section-title">Portfolio</h2>
+        <div class="container">
+          <div class="panel active" style="background-image: url('https://pentagram-production.imgix.net/752e8524-6ed0-47a1-bfa5-da18cdd7609d/eo_samsung_new_14.jpg?rect=%2C%2C%2C&w=1280&fm=jpg&q=70&auto=format,https://pentagram-production.imgix.net/752e8524-6ed0-47a1-bfa5-da18cdd7609d/eo_samsung_new_14.jpg?rect=%2C%2C%2C&w=853&fm=jpg&q=70&auto=format,https://pentagram-production.imgix.net/752e8524-6ed0-47a1-bfa5-da18cdd7609d/eo_samsung_new_14.jpg?rect=%2C%2C%2C&w=427&fm=jpg&q=70&auto=format');">
+              <h3>Portfolio Website</h3>
+          </div>
+  
+          <div class="panel"
+              style="background-image: url('https://images-eu.ssl-images-amazon.com/images/I/51gEFLtVorL.png');">
+              <a href="https://github.com/BudhijaxUday/hangman"> <h3>Hangman Game</h3> </a>
+
+          </div>
+
+      </section>
+
+      <!-- Contact -->
+      <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact__container bd-grid">
+            <div class="contact__info">
+                <h3 class="contact__subtitle">Email</h3>
+                <span class="conatct__text">udaybudhija26@mail.com</span><a href="mailto:udaybudhija26@gmail.com"> <img src="https://th.bing.com/th/id/OIP.w8csn2YW8Ds6UEUuweEqCAHaHa?pid=ImgDet&rs=1" height="30px" width="30px"  alt="Mail"> </a>
+
+                <h3 class="contact__subtitle">Phone</h3>
+                <span class="conatct__text">+91 8059000091</span><a href="Tel:8059000091"> <img src="https://th.bing.com/th/id/OIP.L2HI6MsMRhx_1b13ghCCcwAAAA?pid=ImgDet&rs=1" height="30px" width="30px" alt="Contact"> </a>
+
+                <h3 class="contact__subtitle">Address</h3>
+                <span class="conatct__text">Gurgaon, India</span>
+            </div>
+
+            <form action="" class="contact__form">
+                <div class="contact__input">
+                    <input type="text" placeholder="Name" class="contact__input">
+                    <input type="email" placeholder="Email" class="contact__input">
+
+                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                    <input type="submit" value="Send" class="contact__button">
+                </div>
+            </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__data">
+                <h2 class="footer__title">Uday Budhija</h2>
+                <p class="footer__text">Aspiring Fullstack Developer.</p>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">Explore</h2>
+                <ul>
+                    <li><a href="#home" class="footer__link">Home</a></li>
+                    <li><a href="#about" class="footer__link">About</a></li>
+                    <li><a href="#skills" class="footer__link">Skills</a></li>
+                    <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                    <li><a href="#contact" class="footer__link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">
+                    Follow
+                </h2>
+                <a href="https://twitter.com/BudhijaUday" class="footer__social"><i class="bx bxl-twitter"></i></a>
+
+            </div>
+        </div>
+      </footer>
+
+      <!-- scroll reveal -->
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="./main.js"></script>
+      <script>
+        const panels = document.querySelectorAll('.panel');
+
+        panels.forEach(panel => {
+            panel.addEventListener('click', () => {
+                removeActiveClasses();
+                panel.classList.add('active');
+            })
+        })
+        
+        function removeActiveClasses(){
+            panels.forEach(panel => {
+                panel.classList.remove('active');
+            })
+        }
+      </script>
+    </main>
+  </body>
+</html>
